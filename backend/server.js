@@ -56,6 +56,10 @@ async function seedDatabase() {
     console.log('Database seeded with 10 Age Kits!');
   }
 }
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// THIS IS REQUIRED FOR VERCEL
+module.exports = app;
