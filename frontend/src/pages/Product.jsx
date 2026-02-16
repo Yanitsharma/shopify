@@ -10,7 +10,7 @@ export default function Product() {
 
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to top on load
-    axios.get(`http://localhost:5000/api/products/${id}`)
+    axios.get(`https://shopif-theta.vercel.app/api/products/${id}`)
       .then(res => setProduct(res.data))
       .catch(err => console.error(err));
   }, [id]);
