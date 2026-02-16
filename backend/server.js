@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB (Replace with your connection string if using Atlas)
-mongoose.connect('mongodb://127.0.0.1:27017/heart-and-bloom')
+mongoose.connect('mongodb+srv://yanit:shiv12345@cluster0.qhrdc1p.mongodb.net/')
   .then(() => {
     console.log('Connected to MongoDB');
     seedDatabase();
