@@ -6,7 +6,7 @@ export default function Collection() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get('https://shopif-theta.vercel.app/api/products')
+    axios.get('https://shopify-jwe2.onrender.com/api/products')
       .then(res => setProducts(res.data))
       .catch(err => console.error(err));
   }, []);
